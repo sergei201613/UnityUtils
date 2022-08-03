@@ -4,7 +4,7 @@ using System;
 
 namespace TeaGames.Utilities.Runtime
 {
-    static class MonoExtensions
+    public static class MonoExtensions
     {
         public static Action Delay(this MonoBehaviour mono, float delayInSeconds, Action action)
         {
