@@ -4,7 +4,7 @@ using static System.IO.Path;
 using static UnityEngine.Application;
 using static UnityEditor.AssetDatabase;
 
-namespace TeaGames.Utilities.Editor
+namespace TeaGames.Unity.Utils.Editor
 {
     public static class ToolsMenu
     {

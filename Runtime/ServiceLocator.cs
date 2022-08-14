@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using TeaGames.Utilities.Runtime;
 
-namespace TeaGames.Utilities.Runtime
+namespace TeaGames.Unity.Utils.Runtime
 {
     [DefaultExecutionOrder(-100)]
     public abstract class ServiceLocator<T> : MonoBehaviour where T : ServiceLocator<T>

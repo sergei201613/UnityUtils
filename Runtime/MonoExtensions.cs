@@ -2,7 +2,7 @@
 using UnityEngine;
 using System;
 
-namespace TeaGames.Utilities.Runtime
+namespace TeaGames.Unity.Utils.Runtime
 {
     public static class MonoExtensions
     {

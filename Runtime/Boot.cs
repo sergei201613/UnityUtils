@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TeaGames.Utilities.Runtime
+namespace TeaGames.Unity.Utils.Runtime
 {
     public class Boot : MonoBehaviour
     {

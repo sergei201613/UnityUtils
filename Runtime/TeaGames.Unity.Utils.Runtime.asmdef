@@ -1,6 +1,6 @@
 {
-    "name": "TeaGames.Utilities.Editor",
-    "rootNamespace": "TeaGames.Utilities.Editor",
+    "name": "TeaGames.Unity.Utils.Runtime",
+    "rootNamespace": "TeaGames.Unity.Utils.Runtime",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
