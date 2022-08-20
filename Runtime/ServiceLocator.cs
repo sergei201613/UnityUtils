@@ -9,7 +9,7 @@ namespace TeaGames.Unity.Utils.Runtime
 
         public static TS Get<TS>() where TS : Component
         {
-            return Instance.RequireComponent<TS>();
+            return Instance.RequireComponentInChildren<TS>();
         }
 
         protected virtual void Awake()

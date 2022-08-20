@@ -1,3 +1,5 @@
+#if UNITY_EDITOR
+
 using UnityEditor;
 using static System.IO.Directory;
 using static System.IO.Path;
@@ -15,6 +17,14 @@ namespace TeaGames.Unity.Utils.Editor
             Refresh();
         }
 
+        [MenuItem("Tools/Setup/Create Feature Based Folders")]
+        public static void CreateFeatureBasedFolders()
+        {
+            CreateDirectories("_Project", "Common");
+            CreateDirectories("_Project/Common", "Scenes");
+            Refresh();
+        }
+
         public static void CreateDirectories(string root, params string[] dir)
         {
             var fullpath = Combine(dataPath, root);
@@ -25,3 +35,5 @@ namespace TeaGames.Unity.Utils.Editor
         }
     }
 }
+
+#endif
