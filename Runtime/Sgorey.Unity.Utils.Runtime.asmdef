@@ -1,6 +1,6 @@
 {
-    "name": "TeaGames.Unity.Utils.Runtime",
-    "rootNamespace": "TeaGames.Unity.Utils.Runtime",
+    "name": "Sgorey.Unity.Utils.Runtime",
+    "rootNamespace": "Sgorey.Unity.Utils.Runtime",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

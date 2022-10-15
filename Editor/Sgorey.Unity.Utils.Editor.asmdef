@@ -1,6 +1,6 @@
 {
-    "name": "TeaGames.Unity.Utils.Editor",
-    "rootNamespace": "TeaGames.Unity.Utils.Editor",
+    "name": "Sgorey.Unity.Utils.Editor",
+    "rootNamespace": "Sgorey.Unity.Utils.Editor",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
