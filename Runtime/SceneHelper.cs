@@ -2,7 +2,7 @@ using System;
 using UnityEngine.SceneManagement;
 using static UnityEngine.SceneManagement.SceneManager;
 
-namespace TeaGames.Unity.Utils.Runtime
+namespace Sgorey.Unity.Utils.Runtime
 {
     public static class SceneHelper
     {

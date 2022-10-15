@@ -6,7 +6,7 @@ using static System.IO.Path;
 using static UnityEngine.Application;
 using static UnityEditor.AssetDatabase;
 
-namespace TeaGames.Unity.Utils.Editor
+namespace Sgorey.Unity.Utils.Editor
 {
     public static class ToolsMenu
     {

@@ -1,47 +1,29 @@
 ﻿using UnityEngine;
+using UnityEngine.Assertions;
 
-namespace TeaGames.Unity.Utils.Runtime
+namespace Sgorey.Unity.Utils.Runtime
 {
     public static class UnityExtensions
     {
-        public static T RequireComponent<T>(this GameObject gameObject)
+        public static T GetComp<T>(this GameObject gameObject) where T : Component
         {
-#if DEBUG
-            if (gameObject.TryGetComponent<T>(out var component))
-                return component;
-            else
-                throw new MissingComponentException($"Missing {typeof(T).FullName} component of {gameObject.gameObject.name} game object!");
-#else
-            return gameObject.GetComponent<T>();
-#endif
+            T comp = gameObject.GetComponent<T>();
+            Assert.IsNotNull(comp, $"Missing {typeof(T).FullName} component of {gameObject.name} game object or it child!");
+            return comp;
         }
 
-        public static T RequireComponentInChildren<T>(this GameObject gameObject)
+        public static T GetCompInChildren<T>(this GameObject gameObject) where T : Component
         {
-#if DEBUG
-            var component = gameObject.GetComponentInChildren<T>();
-
-            if (component != null)
-                return component;
-            else
-                throw new MissingComponentException($"Missing {typeof(T).FullName} component of {gameObject.gameObject.name} game object or it child!");
-#else
-            return gameObject.GetComponentInChildren<T>();
-#endif
+            T comp = gameObject.GetComponentInChildren<T>();
+            Assert.IsNotNull(comp, $"Missing {typeof(T).FullName} component of {gameObject.name} game object or it child!");
+            return comp;
         }
 
-        public static T FindComponentInScene<T>(this GameObject gameObject) where T : Object
+        public static T FindComp<T>(this MonoBehaviour _) where T : Component
         {
-#if DEBUG
-            var component = Object.FindObjectOfType<T>();
-
-            if (component != null)
-                return component;
-            else
-                throw new MissingComponentException($"Can't find component of type {typeof(T).FullName} in the scene!");
-#else
-            return Object.FindObjectOfType<T>();
-#endif
+            T comp = Object.FindObjectOfType<T>();
+            Assert.IsNotNull(comp, $"Can't find component of type {typeof(T).FullName} in the scene!");
+            return comp;
         }
     }
 }
