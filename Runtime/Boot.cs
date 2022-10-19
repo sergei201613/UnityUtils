@@ -4,7 +4,7 @@ namespace Sgorey.Unity.Utils.Runtime
 {
     public class Boot : MonoBehaviour
     {
-        public event System.Action BootComplete;
+        public event System.Action SceneLoaded;
 
         [SerializeField] private string _startScene;
 
@@ -12,7 +12,7 @@ namespace Sgorey.Unity.Utils.Runtime
         {
             SceneHelper.AddSceneAsync(_startScene, () =>
             {
-                BootComplete?.Invoke();
+                SceneLoaded?.Invoke();
                 Destroy(gameObject);
             });
         }
